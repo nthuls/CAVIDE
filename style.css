@@ -27,6 +27,7 @@ ul {
 
 .item {
     padding: auto;
+    width: 97%;
 }
 
 /* Navbar code */
@@ -66,10 +67,9 @@ ul {
     overflow: hidden;
 }
 
-.menu{
-    margin-right: 10px;
+.menu {
+    margin-right: -6px;
 }
-
 /* Text Styling */
 .item-0 {
     display: flex;
@@ -79,12 +79,12 @@ ul {
 
 .item-0 .text-grid-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .text-container {
-    width: 700px;
+    width: 60%;
     padding: 20px;
     margin: auto;
     background-color: rgb(255, 255, 255);
@@ -130,7 +130,7 @@ ul {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 30%;
+    width: 40%;
 }
 
 .blockquote:before {
@@ -139,30 +139,32 @@ ul {
 
 .blockquote:after {
     bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .text-grid-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .text-container {
-    width: 400px;
+    width: 45%;
     padding: 20px;
     margin: 10px;
     background-color: #ffffff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        /* Align items horizontally at the center */
+}
+.text-container span {
+    font-weight: bold;
 }
 
 .text-container h2 {
     font-size: 24px;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-.text-container h3 {
-    font-size: 18px;
     margin-bottom: 10px;
     color: #000;
 }
@@ -172,9 +174,33 @@ ul {
     line-height: 1.5;
 }
 
-.text-container span {
-    font-weight: bold;
+.text-container ul {
+    margin-top: 10px;
+    text-align: center;
 }
+
+.text-container ul li {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.responsive-image {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    /* Ensure the image does not exceed its container */
+    height: auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .text-container {
+        width: 70%;
+    }
+}
+
+
 
 /* Logo section */
 .text-grid-container-Logos {
@@ -245,21 +271,68 @@ ul {
         justify-content: center;
     }
 }
+/* Item new */
+.item-new {
+    padding: 20px;
+}
 
+.text-grid-container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.text-container-1 {
+    flex: 0 0 20%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.text-container-1 h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.text-container-1 p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.team-work {
+    background-color: #efefef;
+}
+
+.integrity {
+    background-color: #efefef;
+}
+
+.commitment {
+    background-color: #fcfcfc;
+}
+@media (max-width: 700px) {
+    .text-grid-container-1 {
+        flex-direction: column;
+    }
+
+    .text-container-1 {
+        flex: 0 0 100%;
+    }
+}
 /* Footer */
 .footer {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
 }
 
 .footer .col {
-    width: 190px;
-    height: auto;
+    width: 25%;
     box-sizing: border-box;
     padding: 0px 20px 20px 20px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .footer .col h1 {
@@ -305,40 +378,7 @@ ul {
     clear: both;
 }
 
-.contain {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-@media only screen and (max-width: 1139px) {
-    .contain .social {
-        width: 1000px;
-        display: block;
-    }
-
-    .social h1 {
-        margin: 0px;
-    }
-}
-
 @media only screen and (max-width: 950px) {
-    .footer .col {
-        width: 33%;
-    }
-
-    .footer .col h1 {
-        font-size: 14px;
-    }
-
-    .footer .col ul li {
-        font-size: 13px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
     .footer .col {
         width: 50%;
     }
@@ -352,13 +392,12 @@ ul {
     }
 }
 
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 500px) {
     .footer .col {
         width: 100%;
     }
 }
-
-/* Back to top Button */
+/* Back to Top button */
 #backToTop {
     display: none;
     position: fixed;
